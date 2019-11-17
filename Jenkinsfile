@@ -5,7 +5,7 @@ pipeline {
       steps {
         withAWS(region:'us-west-2',credentials:'aws-static') {
           sh ' echo "Uploading content to AWS" '
-          s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'static-html-deploy')
+          s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'Index.html', bucket:'static-html-deploy')
           
         }
       }
